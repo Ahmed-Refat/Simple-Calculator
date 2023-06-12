@@ -2,39 +2,43 @@
 #include <iostream>
 using namespace std;
 int main() {
-    
-    int num1,op,num2;
-    cout << "enter the num1: \n";
-    cin >> num1;
-    
-    cout << "choose the operation: \n";
+
+   cout << "enter the first number: \n";
+   int first_number;
+   cin >> first_number;
+
+    cout << "choose opration number: \n";
     cout << "[1] + \n";
     cout << "[2] - \n";
     cout << "[3] / \n";
     cout << "[4] * \n";
-    cin >> op;
+    int opration;
+    cin >> opration;
     
-    cout << "enter the num2: \n";
-    cin >> num2;
+     cout << "enter the second number: \n";
+   int second_number;
+   cin >> second_number;
     
-    switch (op)
+    if (opration == 1)
     {
-        case 1:
-          cout << num1 << " + " << num2 << " = " << num1 + num2;
-          break;
-        case 2:
-          cout << num1 << " - " << num2 << " = " << num1 - num2;
-          break;
-        case 3:
-          cout << num1 << " / " << num2 << " = " << num1 / num2;
-          break;
-        case 4:
-          cout << num1 << " * " << num2 << " = " << num1 * num2;
-          break;
-        
-        default:
-          cout << "operation is not valid \n";
+          cout << first_number + second_number << "\n";
+    }
+    else  if (opration == 2)
+    {
+          cout << first_number - second_number << "\n";
+    }
+    else if (opration == 3)
+    {
+          cout << first_number / second_number << "\n";
+    }
+    else if (opration == 4)
+    {
+          cout << first_number * second_number << "\n";
+    }
+    else if (opration != 1,2,3,4)
+    {
+        cout << "opration is not valid or enter the number";
     }
 
- return 0;   
+    return 0;
 }
